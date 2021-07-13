@@ -6,7 +6,6 @@ def rand():
     return a
 
 
-# 生成随机颜色列表，思路同check.py
 def color(color_list, num_):
     num = 0
     if len(color_list) == 0:
@@ -25,7 +24,6 @@ def color(color_list, num_):
     return color_list
 
 
-# 通过num获取颜色
 def get_color(color_list, num):
     for colors in color_list:
         if num == colors[0]:
