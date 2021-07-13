@@ -1,7 +1,6 @@
 import random
 
 
-# 判断相同数字个数是否为偶数
 def check(matrix):
     size = matrix.shape
     father_list = []
@@ -28,7 +27,6 @@ def check(matrix):
                             else:
                                 num += 1
     for list_ in father_list:
-        # 列表长度为奇数，否则随机删掉一个
         if len(list_) % 2 == 1:
             pass
         else:
@@ -36,6 +34,5 @@ def check(matrix):
             matrix[list_[index]] = 0
             del list_[index]
     for list_ in father_list:
-        # 总个数
         length += (len(list_) - 1)
     return matrix, father_list, length
