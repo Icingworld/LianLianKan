@@ -1,7 +1,6 @@
 global x, y, x1_re, x2_re, y1_re, y2_re
 
 
-# 判断是否连通
 def judge(matrix, x1, y1, x2, y2):
     global x, y, x1_re, x2_re, y1_re, y2_re
     size = matrix.shape
@@ -10,7 +9,6 @@ def judge(matrix, x1, y1, x2, y2):
     else:
         return False
 
-    # 返回排序的列表，方便坐标间的遍历
     def what(par1, par2):
         if par1 < par2:
             a = [par1, par2]
@@ -20,7 +18,6 @@ def judge(matrix, x1, y1, x2, y2):
 
     x = what(x1, x2)
     y = what(y1, y2)
-    # 横坐标相同
     if x1 == x2:
         if y[1] - y[0] == 1:
             return True
@@ -33,7 +30,6 @@ def judge(matrix, x1, y1, x2, y2):
                         pass
                 else:
                     pass
-    # 纵坐标相同
     if y1 == y2:
         if x[1] - x[0] == 1:
             return True
@@ -46,8 +42,6 @@ def judge(matrix, x1, y1, x2, y2):
                         pass
                 else:
                     pass
-    # 横纵坐标都不同
-    # 纵轴平移
     for X in range(0, size[0]):
         x1_re = x2_re = False
         distance_x1 = abs(X - x1)
@@ -105,7 +99,6 @@ def judge(matrix, x1, y1, x2, y2):
                             pass
                     else:
                         continue
-    # 横轴平移
     for Y in range(0, size[1]):
         y1_re = y2_re = False
         distance_y1 = abs(Y - y1)
