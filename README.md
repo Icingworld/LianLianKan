@@ -3,4 +3,3 @@
 ### what you need:
 + pygame
 + numpy
-## a little bugs are stll here(lol)
